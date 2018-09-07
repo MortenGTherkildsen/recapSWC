@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Kurser {
 
-    ArrayList<Kursus> kurser;
+    ArrayList<Kursus> kurser = new ArrayList<>();
 
     public void listAllKurser(){
         for (Kursus k:kurser
@@ -19,17 +19,15 @@ public class Kurser {
 
         Kursus kursus = new Kursus();
 
+        kurser.add(kursus);
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Kursus-navn:");
         kursus.navn = sc.nextLine();
 
-
-        while (kursus.undervisere)
-        System.out.println("Liste med tilgængelige undervisere:");
-        teachers.listAllTeachers();
         System.out.println("Tilføj underviser:");
-        kursus.undervisere.add(teachers.teachers[sc.nextInt()]);
+
+        kursus.addTeacher(teachers);
 
 
         System.out.println("Liste med elever:");

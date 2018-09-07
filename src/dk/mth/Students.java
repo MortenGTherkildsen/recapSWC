@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Students {
 
-    ArrayList<Student> studerende;
+    ArrayList<Student> studerende = new ArrayList<>();
 
 
     public void listAllStudents(){

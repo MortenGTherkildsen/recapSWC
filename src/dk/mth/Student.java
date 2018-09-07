@@ -7,5 +7,8 @@ public class Student {
     String cprnr;
     String email;
 
-
+    public Student(int studentNumber, String navn) {
+        this.studentNumber = studentNumber;
+        this.navn = navn;
+    }
 }
