@@ -26,4 +26,8 @@ public class Kursus {
         System.out.println("Du har valgt " + teachers.getTeacherByID(x).navn);
         undervisere.add(teachers.getTeacherByID(x));
     }
+
+    public void addStudents(Students students){
+
+    }
 }

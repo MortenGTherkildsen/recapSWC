@@ -30,23 +30,21 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         while (menuSvar==-1){
-            System.out.println("0. Se Alle Kurser");
-            System.out.println("1. Opret Kursus");
-            System.out.println("2. Rediger Kursus");
-            System.out.println("3. Slet Kursus");
+            System.out.print("0. Se Alle Kurser" + "        ");
+            System.out.print("1. Opret Kursus" + "           ");
+            System.out.print("2. Rediger Kursus" + "        ");
+            System.out.print("3. Slet Kursus" + "        ");
+            System.out.print("4. Tilføj underviser [til kursus]" + "  ");
+            System.out.print("5. Tilføj studerende [til kursus]");
             System.out.println("");
+            System.out.print("10. Se alle Studerende" + "   ");
+            System.out.print("11. Opret ny Studerende" + "   ");
+            System.out.print("12. Rediger Studerende" + "   ");
+            System.out.print("13. Slet Studerende");
             System.out.println("");
-            System.out.println("");
-            System.out.println("10. Se alle Studerende");
-            System.out.println("11. Opret ny Studerende");
-            System.out.println("12. Rediger Studerende");
-            System.out.println("13. Slet Studerende");
-            System.out.println("");
-            System.out.println("");
-            System.out.println("");
-            System.out.println("20. Se alle Lærere");
-            System.out.println("21. Opret ny Lærer");
-            System.out.println("22. Rediger Lærer");
+            System.out.print("20. Se alle Lærere" + "       ");
+            System.out.print("21. Opret ny Lærer" + "        ");
+            System.out.print("22. Rediger Lærer" + "        ");
             System.out.println("23. Slet Lærer");
 
             menuSvar = scanner.nextInt();
@@ -62,6 +60,7 @@ public class Main {
                 break;
 
             }
+            menuSvar=-1;
         }
 
 

@@ -8,10 +8,15 @@ public class Kurser {
     ArrayList<Kursus> kurser = new ArrayList<>();
 
     public void listAllKurser(){
-        for (Kursus k:kurser
-             ) {
-            System.out.println(k.navn);
-
+        if(kurser.size()>0) {
+            System.out.println("Kursusliste:");
+            for (Kursus k : kurser
+            ) {
+                System.out.println(k.navn);
+            }
+        }
+        else if(kurser.size()==0){
+            System.out.println("Kursuslisten er tom.");
         }
     }
 
@@ -33,6 +38,7 @@ public class Kurser {
         System.out.println("Liste med elever:");
         students.listAllStudents();
         System.out.println("Tilføj studerende");
+
 
 
     }

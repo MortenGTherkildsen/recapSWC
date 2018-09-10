@@ -7,16 +7,20 @@ public class Teachers {
     ArrayList<Teacher> teacherList = new ArrayList<>();
 
     public void listAllTeachers(){
-        for (Teacher t:teacherList
-        ) {
-            System.out.println(t.teacherID + "   " + t.navn);
 
+        if(teacherList.size()>0) {
+            for (Teacher t : teacherList
+            ) {
+                System.out.println(t.teacherID + "   " + t.navn);
+
+            }
+        }
+        else if(teacherList.size()==0){
+            System.out.println("Der er ingen lærere på lærerlisten!");
         }
     }
 
     public Teacher getTeacherByID(int ID){
-
-        System.out.println("Leder efter lærer med ID: " + ID);
 
         for (Teacher t:teacherList
              ) {
