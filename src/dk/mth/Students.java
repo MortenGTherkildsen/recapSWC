@@ -10,8 +10,20 @@ public class Students {
     public void listAllStudents(){
         for (Student s:studerende
         ) {
-            System.out.println(s.navn);
+            System.out.println(s.studentNumber + " " + s.navn);
 
         }
+
+    }
+    public Student getStudentByStudentNumber(int ID){
+
+        for (Student t:studerende
+                ) {
+            if(t.studentNumber==ID) {
+                return t;
+            }
+        }
+        return null;
+
     }
 }

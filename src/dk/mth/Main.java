@@ -54,6 +54,8 @@ public class Main {
                 break;
                 case 1: kurser.addKursus(teachers, students);
                 break;
+                case 3: kurser.deleteKursus();
+                break;
                 case 10: students.listAllStudents();
                 break;
                 case 20: teachers.listAllTeachers();
