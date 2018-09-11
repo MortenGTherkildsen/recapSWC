@@ -12,7 +12,7 @@ public class Kurser {
             System.out.println("Kursusliste:");
             for (int x=0; x<kurser.size(); x++){
 
-                System.out.println(x+1 + "  " + kurser.get(x).navn);
+                System.out.println(x+1 + "  " + kurser.get(x).navn + "Undervisere/Eksaminatorer: " + kurser.get(x).undervisereToString() + "  Elever:" + kurser.get(x).eleverToString());
             }
 
         }
@@ -20,7 +20,6 @@ public class Kurser {
             System.out.println("Kursuslisten er tom.");
         }
     }
-
     public void addKursus(Teachers teachers, Students students){
 
         Kursus kursus = new Kursus();
@@ -39,7 +38,9 @@ public class Kurser {
 
         kursus.addStudents(students);
 
+        System.out.println("Info om eksamen");
 
+        kursus.eksamen = sc.next();
 
     }
     public void deleteKursus(){
@@ -51,4 +52,20 @@ public class Kurser {
         kurser.remove(svar-1);
 
     }
+    public void addStudentsToKursus(Students students){
+        System.out.println("Hvilket kursus vil du tilføje elever til?");
+        listAllKurser();
+        Scanner sc = new Scanner(System.in);
+        int svar = sc.nextInt();
+        kurser.get(svar-1).addStudents(students);
+
+    }
+    public void deleteStudentsFromKursus(){
+        System.out.println("Fra hvilket kursus vil du slette elever?");
+        listAllKurser();
+        Scanner sc = new Scanner(System.in);
+        int svar = sc.nextInt();
+        Kursus k = kurser.get(svar-1);
+        k.deleteStudentsFromKursus();
+    };
 }

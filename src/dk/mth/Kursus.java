@@ -7,6 +7,7 @@ public class Kursus {
 
     int kursusNumber;
     String navn;
+    String eksamen;
     ArrayList<Teacher> undervisere = new ArrayList<>();
     ArrayList<Student> studerende = new ArrayList<>();
     int svar =1;
@@ -16,6 +17,38 @@ public class Kursus {
 
     }
 
+    public void listAllStudents(){
+        for(int x=0; x<studerende.size(); x++){
+            System.out.println(x+1 + " " + studerende.get(x).navn);
+        }
+    }
+    public void deleteStudentsFromKursus(){
+        listAllStudents();
+        Scanner sc = new Scanner(System.in);
+        int svar = sc.nextInt();
+        studerende.remove(svar-1);
+    }
+
+
+    public String eleverToString(){
+        String test = "";
+
+        for (Student s:studerende
+             ) {test = test + s.navn + ", ";
+
+        }
+        return test;
+    }
+
+    public String undervisereToString(){
+
+        String test = "";
+
+        for (Teacher t:undervisere
+             ) {test = test + t.navn + ", ";
+        }
+        return test;
+    }
     public void addTeacher(Teachers teachers){
 
         while (svar==1) {
