@@ -26,19 +26,16 @@ public class Main {
         students.studerende.add(new Student(6, "Peter"));
 
 
-
-
-
         int menuSvar = -1;
         Scanner scanner = new Scanner(System.in);
 
-        while (menuSvar==-1){
+        while (menuSvar == -1) {
             System.out.print("0. Se Alle Kurser" + "        ");
             System.out.print("1. Opret Kursus" + "           ");
             System.out.print("2. Slet Kursus" + "        ");
             System.out.print("4. Tilføj underviser [til kursus]" + "  ");
             System.out.print("5. Slet underviser [fra kursus]" + "  ");
-            System.out.print("6. Tilføj studerende [til kursus]  (ikke implementeret)");
+            System.out.print("6. Tilføj studerende [til kursus]");
             System.out.print("7. Slet studerende [fra kursus]  (ikke implementeret)");
             System.out.print("8. Redigér eksamensinfo");
             System.out.println("");
@@ -54,25 +51,31 @@ public class Main {
 
             menuSvar = scanner.nextInt();
 
-            switch (menuSvar){
-                case 0: kurser.listAllKurser();
-                break;
-                case 1: kurser.addKursus(teachers, students);
-                break;
-                case 2: kurser.deleteKursus();
-                break;
-
-                case 6: kurser.addStudentsToKursus(students);
-                break;
-                case 7: kurser.deleteStudentsFromKursus();
+            switch (menuSvar) {
+                case 0:
+                    kurser.listAllKurser();
                     break;
-                case 10: students.listAllStudents();
-                break;
-                case 20: teachers.listAllTeachers();
-                break;
+                case 1:
+                    kurser.addKursus(teachers, students);
+                    break;
+                case 2:
+                    kurser.deleteKursus();
+                    break;
+                case 6:
+                    kurser.addStudentsToKursus(students);
+                    break;
+                case 7:
+                    kurser.deleteStudentsFromKursus();
+                    break;
+                case 10:
+                    students.listAllStudents();
+                    break;
+                case 20:
+                    teachers.listAllTeachers();
+                    break;
 
             }
-            menuSvar=-1;
+            menuSvar = -1;
         }
 
 

@@ -70,6 +70,7 @@ public class Kursus {
     }
 
     public void addStudents(Students students){
+        svar2 = 1;
         while (svar2==1) {
             System.out.println("liste med studerende:");
             students.listAllStudents();
