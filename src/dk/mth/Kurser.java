@@ -76,4 +76,12 @@ public class Kurser {
         Kursus k = kurser.get(svar-1);
         k.changeInfoOmEksamen();
     }
+
+    public void addTeacherToKursus(Teachers teachers){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Til hvilket kursus vil du tilføje en underviser?");
+        listAllKurser();
+        int svar = sc.nextInt();
+        kurser.get(svar-1).addTeacher(teachers);
+    }
 }

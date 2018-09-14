@@ -60,6 +60,7 @@ public class Kursus {
     }
     public void addTeacher(Teachers teachers){
 
+        svar = 1;
         while (svar==1) {
             teachers.listAllTeachers();
             System.out.println("Hvilken underviser vil du tilføje til kurset?");
