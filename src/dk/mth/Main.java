@@ -73,6 +73,9 @@ public class Main {
                 case 10:
                     students.listAllStudents();
                     break;
+                case 11:
+                    students.addStudent();
+                    break;
                 case 20:
                     teachers.listAllTeachers();
                     break;

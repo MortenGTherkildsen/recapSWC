@@ -1,6 +1,7 @@
 package dk.mth;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Students {
 
@@ -15,6 +16,21 @@ public class Students {
         }
 
     }
+
+    public void addStudent(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Opret studerende");
+        int nytStudieID = studerende.size()+1;
+
+        System.out.println("Navn");
+        String navn = sc.nextLine();
+
+        studerende.add(new Student(nytStudieID, navn));
+
+        listAllStudents();
+    }
+
+
     public Student getStudentByStudentNumber(int ID){
 
         for (Student t:studerende
