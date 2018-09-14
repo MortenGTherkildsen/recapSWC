@@ -1,6 +1,7 @@
 package dk.mth;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Teachers {
 
@@ -8,6 +9,7 @@ public class Teachers {
 
     public void listAllTeachers(){
 
+        System.out.println("Lærerliste:");
         if(teacherList.size()>0) {
             for (Teacher t : teacherList
             ) {
@@ -30,5 +32,20 @@ public class Teachers {
         }
         return null;
 
+    }
+
+    public void addTeacher(){
+
+        int nytTeacherID = teacherList.size()+1;
+        System.out.println(nytTeacherID);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Tilføj lærer");
+        System.out.print("Navn: ");
+        String navn = sc.nextLine();
+        Teacher teacher = new Teacher(nytTeacherID, navn);
+        teacherList.add(teacher);
+        System.out.println("Har tilføjet " + teacher.teacherID + " " + teacher.navn + " til lærerlisten");
+
+        listAllTeachers();
     }
 }

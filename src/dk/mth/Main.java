@@ -46,8 +46,8 @@ public class Main {
             //System.out.println("");
             System.out.print("20. Se alle Lærere" + "                   ");
             System.out.println("21. Opret ny Lærer" + "        ");
-            System.out.print("22. Rediger Lærer" + "                 ");
-            System.out.println("23. Slet Lærer");
+            //System.out.print("22. Rediger Lærer" + "                 ");
+            //System.out.println("23. Slet Lærer");
 
             menuSvar = scanner.nextInt();
 
@@ -75,6 +75,9 @@ public class Main {
                     break;
                 case 20:
                     teachers.listAllTeachers();
+                    break;
+                case 21:
+                    teachers.addTeacher();
                     break;
 
             }
