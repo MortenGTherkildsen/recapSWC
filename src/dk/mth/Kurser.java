@@ -12,7 +12,7 @@ public class Kurser {
             System.out.println("Kursusliste:");
             for (int x=0; x<kurser.size(); x++){
 
-                System.out.println(x+1 + "  " + kurser.get(x).navn + "Undervisere/Eksaminatorer: " + kurser.get(x).undervisereToString() + "  Elever:" + kurser.get(x).eleverToString());
+                System.out.println(x+1 + "  " + kurser.get(x).navn + " Info om eksamen: " + kurser.get(x).eksamen + " Undervisere/Eksaminatorer: " + kurser.get(x).undervisereToString() + "  Elever:" + kurser.get(x).eleverToString());
             }
 
         }
@@ -67,5 +67,13 @@ public class Kurser {
         int svar = sc.nextInt();
         Kursus k = kurser.get(svar-1);
         k.deleteStudentsFromKursus();
-    };
+    }
+    public void changeInfoOmEksamen(){
+        System.out.println("For hvilket kursus vil du ændre info om eksamen?");
+        listAllKurser();
+        Scanner sc = new Scanner(System.in);
+        int svar = sc.nextInt();
+        Kursus k = kurser.get(svar-1);
+        k.changeInfoOmEksamen();
+    }
 }

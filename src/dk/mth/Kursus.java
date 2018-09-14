@@ -23,10 +23,19 @@ public class Kursus {
         }
     }
     public void deleteStudentsFromKursus(){
-        listAllStudents();
-        Scanner sc = new Scanner(System.in);
-        int svar = sc.nextInt();
-        studerende.remove(svar-1);
+
+        int svar2 = 1;
+        while(svar2==1) {
+            listAllStudents();
+            Scanner sc = new Scanner(System.in);
+            int svar = sc.nextInt();
+            studerende.remove(svar - 1);
+
+            System.out.println("vil du fjerne flere elever fra kurset?");
+            System.out.println("1: ja");
+            System.out.println("2: nej");
+            svar2=sc.nextInt();
+        }
     }
 
 
@@ -86,5 +95,12 @@ public class Kursus {
             svar2=sc.nextInt();
         }
 
+    }
+
+    public void changeInfoOmEksamen(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Info om eksamen er nu: " + eksamen);
+        System.out.println("Skriv ny info om eksamen:");
+        eksamen = sc.nextLine();
     }
 }
