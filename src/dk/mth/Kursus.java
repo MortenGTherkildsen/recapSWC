@@ -63,7 +63,7 @@ public class Kursus {
         svar = 1;
         while (svar==1) {
             teachers.listAllTeachers();
-            System.out.println("Hvilken underviser vil du tilføje til kurset?");
+            System.out.println("Hvilken underviser vil du tilføje til kurset? Vælg nummeret ud for underviserens navn");
 
             Scanner sc = new Scanner(System.in);
             int x = sc.nextInt();
